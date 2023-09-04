@@ -1,16 +1,6 @@
-#primtal = []
-
-#while len(primtal) < 1001:
-#    for tal in range(1,10000):
-#        for i in range(3,tal-1):
-#            if tal % i == 0:    
-#                continue
-#            else: 
-#                   primtal.append(tal)
-
-#print(primtal)
 
 primtal = []
+de_två = []
 
 def is_prime(n):
     if n <= 1:
@@ -28,9 +18,17 @@ def is_prime(n):
 
 num = 2  # Start checking from 2, the first prime number
 
-while len(primtal) < 1000:
+while len(de_två) < 1:
     if is_prime(num):
         primtal.append(num)
+        for tal in primtal:
+            produkt = tal * num
+            if produkt >= 10000:
+                de_två.append(tal)
+                de_två.append(num)   
+                break
     num += 1
 
-print(primtal)
+
+
+print(de_två)
