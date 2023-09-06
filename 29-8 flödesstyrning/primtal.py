@@ -20,13 +20,15 @@ num = 2  # Start checking from 2, the first prime number
 
 while len(de_två) < 1:
     if is_prime(num):
+        produkt = 0
+        if len(primtal) != 0:
+            produkt = primtal[-1] * num
+        
         primtal.append(num)
-        for tal in primtal:
-            produkt = tal * num
-            if produkt >= 10000000000:
-                de_två.append(tal)
-                de_två.append(num)   
-                break
+        if produkt >= 10000000000:
+            de_två.append(primtal[-2])
+            de_två.append(num)   
+            break
     num += 1
 
 
