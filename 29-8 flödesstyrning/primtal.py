@@ -23,7 +23,7 @@ while len(de_två) < 1:
         produkt = 0
         if len(primtal) != 0:
             produkt = primtal[-1] * num
-        
+            
         primtal.append(num)
         if produkt >= 10000000000:
             de_två.append(primtal[-2])
