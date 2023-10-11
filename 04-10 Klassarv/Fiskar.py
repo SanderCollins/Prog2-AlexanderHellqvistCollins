@@ -1,6 +1,10 @@
 class Djur:
     def __init__(self, namn):
         self.namn = namn
+    def at():
+        print("Djuret åt ett annat djur.")
+    def sov():
+        print("Djuret somnade")
     
 class Fagel(Djur):
     def __init__(self, namn, vinsgpann):
@@ -11,11 +15,15 @@ class Fisk(Djur):
     def __init__(self, namn, maxdjup):
         super().__init__(namn)
         self.maxdjup = maxdjup
+    def simma():
+        print("Fisken simmar!")
 
 class Haj(Fisk):
     def __init__(self, namn, maxdjup, antalTänder):
         super().__init__(namn, maxdjup)
         self.antalTänder = antalTänder
+    def at(djur):
+        print(f"Hajen åt {djur.namn}.")
 
 class Torsk(Fisk):
     def __init__(self, namn, maxdjup, hastighet):
@@ -30,4 +38,6 @@ def fånga(haj: Haj, torsk: Torsk):
     return True if haj.maxdjup >= torsk.maxdjup and torsk.hastighet < 30 else False 
 
 print(fånga(haj1, torsk2))
-#print(f"R.I.P {torsk2.namn} will be missed.")
+Haj.at(torsk2)
+Fisk.simma()
+Djur.sov()
