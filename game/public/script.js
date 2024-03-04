@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let red = new Card("red");
   red.summoncard(1);
   
-    //Makes it possible to drop cards
+    // Makes it possible to drop cards
     document.addEventListener('dragover', e => {
         e.preventDefault();
     });
